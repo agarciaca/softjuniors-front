@@ -27,18 +27,8 @@ function App() {
           <section>
               <h1>Mas Vendidos</h1>
               <ul class="bredimagen">
-                  <li class="bredCar">
-                      <div class="imagenes">
-                        <img src={img1} alt="peluche" />
-                      </div>
-                      <span class="titulodeImagen">Peluche</span>
-                  </li>
-                  <li class="bredCar">
-                      <div class="imagenes">
-                          <img src={img2} alt="big combo" />
-                      </div>
-                      <span class="titulodeImagen">Big Combo</span>
-                  </li>
+                  <Jug imag={img1}></Jug>
+                  <Jug imag={img2}></Jug>
               </ul>
           </section>
           <section>
@@ -54,6 +44,16 @@ function App() {
   );
 }
 
+function Jug (props){
+  return(
+    <li class="bredCar">
+      <div class="imagenes">
+        <img src={props.imag} alt="peluche" />
+      </div>
+      <span class="titulodeImagen">Peluche</span>
+    </li>
+  );
+}
 
 
 export default App;
